@@ -1,10 +1,12 @@
 import React from "react";
 
-export default const BeyCard = () => {
+const BeyCard = ({bey, makeFavorite}) => {
   return (
-    <div className='bey-card'>
-      <h3>{/*Bey name goes here*/}</h3>
-      {/*image tag goes here*/}
+    <div className='bey-card' onClick={makeFavorite}>
+      <h3>{bey.name}</h3>
+      <img src={bey.img} />
     </div>
   );
 };
+
+export default BeyCard;
